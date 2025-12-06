@@ -82,7 +82,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[-39.8885630953706,-93.0968386916064],[5.00187682843152,-10.282955120176247]]);
+        }).fitBounds([[-33.75877352377541,-58.677093880031144],[-25.341816038062504,-43.14949071038797]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -169,7 +169,7 @@
             abstract.show = function () {
                 this._div.classList.remove("abstract");
                 this._div.classList.add("abstractUncollapsed");
-                this._div.innerHTML = 'Autora: Vitória Mendonça Prestes<br />Contato: vitoriampresttes@gmail.com';
+                this._div.innerHTML = 'Autora: Vitória Mendonça Prestes         Contato: vitoriampresttes@gmail.com';
         };
         abstract.addTo(map);
         var zoomControl = L.control.zoom({
@@ -1483,7 +1483,7 @@
         var pattern_ZONASDECOLONIZAOMISTA_21_0 = new L.StripePattern({
             weight: 0.3,
             spaceWeight: 2.0,
-            color: '#ffffff',
+            color: '#aaaaaa',
             opacity: 1.0,
             spaceOpacity: 0,
             angle: 315
@@ -1501,7 +1501,7 @@
         var pattern_ZONASDECOLONIZAOMISTA_21_1 = new L.StripePattern({
             weight: 0.3,
             spaceWeight: 2.0,
-            color: '#ffffff',
+            color: '#c1c1c1',
             opacity: 1.0,
             spaceOpacity: 0,
             angle: 225
@@ -1579,7 +1579,7 @@
         var pattern_ZONASCOLONIZADASPORITALIANOS_22_0 = new L.StripePattern({
             weight: 0.3,
             spaceWeight: 2.0,
-            color: '#ffffff',
+            color: '#bfe0cb',
             opacity: 1.0,
             spaceOpacity: 0,
             angle: 225
@@ -1598,7 +1598,7 @@
             return {
                 pane: 'pane_ZONASCOLONIZADASPORITALIANOS_22',
                 opacity: 1,
-                color: 'rgba(218,255,231,1.0)',
+                color: 'rgba(191,224,203,1.0)',
                 dashArray: '',
                 lineCap: 'square',
                 lineJoin: 'bevel',
@@ -1719,7 +1719,7 @@
         var pattern_ZONASCOLONIZADASPORALEMES_24_0 = new L.StripePattern({
             weight: 0.3,
             spaceWeight: 1.4,
-            color: '#ffffff',
+            color: '#ffe2e2',
             opacity: 1.0,
             spaceOpacity: 0,
             angle: 315
@@ -1940,7 +1940,7 @@
         var overlaysTree = [
             {label: '<img src="legend/TORDESILHAS_26.png" /> TORDESILHAS', layer: layer_TORDESILHAS_26},
             {label: '<img src="legend/PRINCIPAISRUMOSDEPENETRAODOSBANDEIRANTES_25.png" /> PRINCIPAIS RUMOS DE PENETRAÇÃO DOS BANDEIRANTES', layer: layer_PRINCIPAISRUMOSDEPENETRAODOSBANDEIRANTES_25},
-        {label: '<b>POVOAMENTO DO RIO GRANDE DO SUL</b>', collapsed: true, selectAllCheckbox: true, children: [
+        {label: '<b>POVOAMENTO DO RIO GRANDE DO SUL</b>',  selectAllCheckbox: true, children: [
             {label: '<img src="legend/ZONASCOLONIZADASPORALEMES_24.png" /> ZONAS COLONIZADAS POR ALEMÃES', layer: layer_ZONASCOLONIZADASPORALEMES_24},
             {label: '<img src="legend/ZONASCOLONIZADASPORAORIANOS_23.png" /> ZONAS COLONIZADAS POR AÇORIANOS', layer: layer_ZONASCOLONIZADASPORAORIANOS_23},
             {label: '<img src="legend/ZONASCOLONIZADASPORITALIANOS_22.png" /> ZONAS COLONIZADAS POR ITALIANOS', layer: layer_ZONASCOLONIZADASPORITALIANOS_22},
