@@ -162,14 +162,20 @@
             this._div = L.DomUtil.create('div',
             'leaflet-control abstract');
             this._div.id = 'abstract'
-
-                abstract.show();
+                this._div.setAttribute("onmouseenter", "abstract.show()");
+                this._div.setAttribute("onmouseleave", "abstract.hide()");
+                this.hide();
                 return this._div;
             };
+            abstract.hide = function () {
+                this._div.classList.remove("abstractUncollapsed");
+                this._div.classList.add("abstract");
+                this._div.innerHTML = 'i'
+            }
             abstract.show = function () {
                 this._div.classList.remove("abstract");
                 this._div.classList.add("abstractUncollapsed");
-                this._div.innerHTML = 'Autora: Vitória Mendonça Prestes         Contato: vitoriampresttes@gmail.com';
+                this._div.innerHTML = 'Autora: Vitória Mendonça Prestes                                                                                                                                                                                        <br />Contato: vitoriampresttes@gmail.com         <br />Orientação: Jefferson Rodrigues dos Santos         <br />Link para o TCC: https://github.com/ProfessorJeffersonSantos/ATLAS-INTERATIVO-DA-FORMACAO-DO-TERRITORIO-BRASILEIRO-E-RIO-GRANDENSE/raw/main/Vit%C3%B3riaPrestes_TCC2025.pdf                                                                                                                                                           <br />';
         };
         abstract.addTo(map);
         var zoomControl = L.control.zoom({
@@ -1946,7 +1952,7 @@
             {label: '<img src="legend/ZONASCOLONIZADASPORITALIANOS_22.png" /> ZONAS COLONIZADAS POR ITALIANOS', layer: layer_ZONASCOLONIZADASPORITALIANOS_22},
             {label: '<img src="legend/ZONASDECOLONIZAOMISTA_21.png" /> ZONAS DE COLONIZAÇÃO MISTA ', layer: layer_ZONASDECOLONIZAOMISTA_21},
             {label: '<img src="legend/ZONASDEMATA_20.png" /> ZONAS DE MATA', layer: layer_ZONASDEMATA_20},]},
-        {label: '<b>PROCESSO DE OCUPAÇÃO DO TERRITÓRIO GAÚCHO</b>', collapsed: true, selectAllCheckbox: true, children: [
+        {label: '<b>PROCESSO DE OCUPAÇÃO DO TERRITÓRIO GAÚCHO</b>',  selectAllCheckbox: true, children: [
             {label: '<img src="legend/REDUES_19.png" /> REDUÇÕES ', layer: layer_REDUES_19},
             {label: '<img src="legend/OUTRASETNIAS_18.png" /> OUTRAS ETNIAS', layer: layer_OUTRASETNIAS_18},
             {label: '<img src="legend/AORIANOS_17.png" /> AÇORIANOS', layer: layer_AORIANOS_17},
