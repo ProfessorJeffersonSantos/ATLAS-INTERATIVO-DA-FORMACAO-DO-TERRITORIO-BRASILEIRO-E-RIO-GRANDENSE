@@ -70,11 +70,11 @@
 
             if (e.target.feature.geometry.type === 'LineString' || e.target.feature.geometry.type === 'MultiLineString') {
               highlightLayer.setStyle({
-                color: '#ffff00',
+                color: 'rgba(255, 255, 0, 1.00)',
               });
             } else {
               highlightLayer.setStyle({
-                fillColor: '#ffff00',
+                fillColor: 'rgba(255, 255, 0, 1.00)',
                 fillOpacity: 1
               });
             }
@@ -82,7 +82,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[-33.75877352377541,-58.677093880031144],[-25.341816038062504,-43.14949071038797]]);
+        }).fitBounds([[-33.75877352377541,-57.16877509859139],[-25.341816038062504,-44.65780949182773]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -175,7 +175,7 @@
             abstract.show = function () {
                 this._div.classList.remove("abstract");
                 this._div.classList.add("abstractUncollapsed");
-                this._div.innerHTML = 'Autora: Vitória Mendonça Prestes                                                                                                                                                                                        <br />Contato: vitoriampresttes@gmail.com         <br />Orientação: Jefferson Rodrigues dos Santos         <br />Link para o TCC: https://github.com/ProfessorJeffersonSantos/ATLAS-INTERATIVO-DA-FORMACAO-DO-TERRITORIO-BRASILEIRO-E-RIO-GRANDENSE/raw/main/Vit%C3%B3riaPrestes_TCC2025.pdf                                                                                                                                                           <br />';
+                this._div.innerHTML = 'Autora: Vitória Mendonça Prestes                                                                                                                                                                                        <br />Contato: vitoriampresttes@gmail.com         <br />Orientação: Jefferson Rodrigues dos Santos         <br />Link para o TCC: https://raw.githubusercontent.com/ProfessorJeffersonSantos/ATLAS-INTERATIVO-DA-FORMACAO-DO-TERRITORIO-BRASILEIRO-E-RIO-GRANDENSE/main/Vit%C3%B3riaPrestesTCC_2025.pdf<br />';
         };
         abstract.addTo(map);
         var zoomControl = L.control.zoom({
